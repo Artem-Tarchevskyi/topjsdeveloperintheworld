@@ -10,6 +10,7 @@ function calculateSiegeTime (date) {
         let restartTimeStart = new Date (year, month, day, 5, 0, 0);
         let restartTimeEnd = new Date (year, month, day, 6, 15, 0 );
         if (futureFortressSiege > restartTimeStart && futureFortressSiege < restartTimeEnd) {
+            console.log("Fortress Siege Time (Restart's siege): " + futureFortressSiege.toLocaleTimeString('eu-US') + ' - ' + futureFortressSiege.toDateString())
             futureFortressSiege = new Date (restartTimeEnd.getTime() + 60*60*1000);
         }
         console.log('Fortress Siege Time: ' + futureFortressSiege.toLocaleTimeString('eu-US') + ' - ' + futureFortressSiege.toDateString());
